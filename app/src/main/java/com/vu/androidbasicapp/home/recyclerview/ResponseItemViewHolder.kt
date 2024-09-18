@@ -1,9 +1,11 @@
 package com.vu.androidbasicapp.home.recyclerview
 
+import android.content.Intent
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.vu.androidbasicapp.DetailsActivity
 import com.vu.androidbasicapp.R
 import com.vu.androidbasicapp.home.data.ResponseItem
 
@@ -30,7 +32,19 @@ class ResponseItemViewHolder(view: View, private val navigationFunction: (Respon
 
         if (showDetails == View.VISIBLE) {
             button.setOnClickListener {
-                navigationFunction(item)
+                val context = itemView.context
+                val intent = Intent(context, DetailsActivity::class.java)
+
+                // Pass the selected item's details to the DetailsActivity
+                intent.putExtra("technique", item.technique)
+                intent.putExtra("equipment", item.equipment)
+                intent.putExtra("subject", item.subject)
+                intent.putExtra("pioneeringPhotographer", item.pioneeringPhotographer)
+                intent.putExtra("yearIntroduced", item.yearIntroduced)
+                intent.putExtra("description", item.description)
+
+                // Start the DetailsActivity
+                context.startActivity(intent)
             }
         }
     }

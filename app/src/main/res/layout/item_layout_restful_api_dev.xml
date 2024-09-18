@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -17,52 +16,56 @@
         <!-- Name TextView -->
         <TextView
             android:id="@+id/itemNametext"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            android:text=""
             android:textAppearance="?attr/textAppearanceTitleMedium"
             android:textColor="#303F9F"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Name" />
 
         <!-- Horizontal LinearLayout to display technique, equipment, and subject in one row -->
         <LinearLayout
             android:id="@+id/horizontalLayout"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toStartOf="@id/itemNametext"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/itemNametext">
 
             <!-- Technique TextView -->
             <TextView
                 android:id="@+id/techniqueTextView"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Technique"
                 android:textSize="16sp"
+                android:layout_weight="1"
                 android:layout_marginEnd="16dp"
                 tools:text="Technique" />
 
             <!-- Equipment TextView -->
             <TextView
                 android:id="@+id/equipmentTextView"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Equipment"
+                android:layout_weight="1"
                 android:layout_marginEnd="16dp"
                 tools:text="Equipment" />
 
             <!-- Subject TextView -->
             <TextView
                 android:id="@+id/subjectTextView"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Subject"
+                android:layout_weight="1"
                 tools:text="Subject" />
         </LinearLayout>
 
