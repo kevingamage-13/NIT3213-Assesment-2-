@@ -2,17 +2,12 @@
 
 ## Cloning and Running the Project in Android Studio
 
-Follow these steps to clone and run the project in Android Studio:
+Follow the steps to clone and run the project in Android Studio:
 
 1. **Clone the Repository**:
     Open a terminal or command prompt and run the following command:
     ```bash
-    git clone https://github.com/yourusername/androidbasicapp-recyclerview-advanced.git
-
-Build software better, together
-GitHub is where people build software. More than 100 million people use GitHub to discover, fork, and contribute to over 420 million projects.
-github.com
-
+    git clone https://github.com/kevingamage-13/NIT3213-Assesment-2-
     ```
 
 2. **Open the Project in Android Studio**:
@@ -28,11 +23,6 @@ github.com
     - Choose an emulator or connected physical device to run the app.
 
 ## Unit Testing
-
-This project includes unit tests for:
-- `DetailsActivity` to check if it correctly displays the passed data.
-- Retrofit API service using mocked responses with Mockito.
-
 Run the tests in Android Studio by:
 1. Right-clicking the `test` directory under `src`.
 2. Selecting **Run Tests** from the context menu.
